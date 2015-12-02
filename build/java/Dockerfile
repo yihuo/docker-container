@@ -1,5 +1,5 @@
 ##Base image Define
-From daocloud.io/daocloud/dao-tomcat
+From daocloud.io/daocloud/dao-tomcat:v7.0.55
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 # This software is only use for inner training.
 ########################################
@@ -10,7 +10,7 @@ MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 
 ##Environment Var Define
 ENV REFRESHED_AT 2015-11-27 16:50
-ENV Version 0.0.1
+ENV Version 0.0.2
 ENV TOMCAT_SERVER_XML_DIR /tomcat/conf
 ENV TOMCAT_SERVER_XML server.xml
 ENV PROJECT_DIR /tomcat/webapps
