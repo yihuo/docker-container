@@ -17,8 +17,6 @@ ENV PROJECT_DIR /tomcat/webapps
 ENV PROJECT_NAME yihuonet_test
 
 #Deploy
-RUN service tomcat stop
 #Revise server.xml文件
 ADD $TOMCAT_SERVER_XML_DIR/$TOMCAT_SERVER_XML $TOMCAT_SERVER_XML_DIR/$TOMCAT_SERVER_XML
 ADD $PROJECT_DIR/$PROJECT_NAME $PROJECT_DIR/$PROJECT_NAME
-RUN service tomcat start
