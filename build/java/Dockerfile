@@ -1,4 +1,4 @@
-﻿#Base image Define
+#Base image Define
 From daocloud.io/daocloud/dao-tomcat:v7.0.55
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 # This software is only use for inner training.
