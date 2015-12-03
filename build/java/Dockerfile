@@ -1,4 +1,4 @@
-##Base image Define
+﻿##Base image Define
 From daocloud.io/daocloud/dao-tomcat:v7.0.55
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 # This software is only use for inner training.
@@ -23,4 +23,4 @@ ENV PROJECT_NAME yihuonet_test
 RUN cd $PROJECT_DIR
 RUN rm -rf $TOMCAT_ROOT_DIR
 #ADD $PROJECT_DIR/$PROJECT_NAME $PROJECT_DIR/$PROJECT_NAME
-#ADD $PROJECT_DIR/$PROJECT_NAME $PROJECT_DIR/$TOMCAT_ROOT_DIR
+ADD $PROJECT_DIR/$PROJECT_NAME $PROJECT_DIR/$TOMCAT_ROOT_DIR
