@@ -1,5 +1,5 @@
 #Base Define
-FROM java:7-jre
+FROM daocloud.io/library/java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-11-27 16:50
 
