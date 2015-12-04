@@ -1,4 +1,5 @@
 #Base Define
+FROM java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-11-27 16:50
 
@@ -8,7 +9,6 @@ ENV REFRESHED_AT 2015-11-27 16:50
 ########################################
 ########################################
 #Official Code by docker-library, https://hub.docker.com/_/tomcat/
-FROM java:7-jre
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
