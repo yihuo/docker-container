@@ -44,7 +44,7 @@ RUN set -x \
 	&& rm tomcat.tar.gz*
 
 #########################################[START]!Pause official code to deploy yihuonet code.
-ENV PROJECT_DIR_NAME webapps/yihuonet_deploy
+ENV PROJECT_DIR_NAME webapps/yihuonet_deploy.war
 ENV TOMCAT_ORIGIN_ROOT webapps/ROOT
 ENV TOMCAT_SERVER_XML conf/server.xml
 
