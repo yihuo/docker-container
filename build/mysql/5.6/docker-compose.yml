@@ -1,4 +1,4 @@
 db:
-  image: tutum/mysql:5.6
+  image: yihuo/mysql:5.6
   environment:
-    MYSQL_PASS: "**ChangeMe**"
+    MYSQL_PASS: "yihuonet.com"
