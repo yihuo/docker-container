@@ -1,4 +1,0 @@
-db:
-  image: yihuo/mysql:5.6
-  environment:
-    MYSQL_PASS: "yihuonet.com"
