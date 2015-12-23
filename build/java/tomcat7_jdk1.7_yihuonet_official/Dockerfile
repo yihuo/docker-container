@@ -1,7 +1,7 @@
 #Base Define
 FROM daocloud.io/library/java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
-ENV REFRESHED_AT 2015-12-07 15:06
+ENV REFRESHED_AT 2015-12-23 15:06
 
 ########################################
 # History  
