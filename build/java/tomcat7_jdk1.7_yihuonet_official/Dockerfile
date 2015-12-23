@@ -47,7 +47,7 @@ RUN set -x \
 
 #########################################[START]!Pause official code to deploy yihuonet code.
 ENV TOMCAT_ORIGIN_ROOT webapps/ROOT
-ENV MCMS_DOWNLOAD_FILE http://7xoylx.com1.z0.glb.clouddn.com/yihuonetyihuonet.zip
+ENV MCMS_DOWNLOAD_FILE http://7xoylx.com1.z0.glb.clouddn.com/yihuonet/yihuonet.zip
 
 #Deploy AND Delete origin root directory
 RUN apt-get install -y wget unzip
@@ -56,7 +56,7 @@ RUN rm -rf ROOT
 RUN mkdir ROOT
 WORKDIR $CATALINA_HOME/$TOMCAT_ORIGIN_ROOT
 RUN wget $MCMS_DOWNLOAD_FILE
-RUN unzip ms.zip
+RUN unzip yihuonet.zip
 #########################################[END]!Recovery official code to deploy yihuonet code.
 WORKDIR $CATALINA_HOME/webapps
 RUN mv manager management
