@@ -1,9 +1,0 @@
-﻿
-# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch Release
-# Changes to be committed:
-#	modified:   build/haproxy/Dockerfile
-#	modified:   build/java/tomcat7_jdk1.7_yihuonet_official/Dockerfile
-#
-
