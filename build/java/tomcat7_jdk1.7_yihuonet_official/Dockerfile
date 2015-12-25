@@ -3,9 +3,13 @@ FROM daocloud.io/library/java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-12-23 15:06
 
+#Version Define
+ENV YIHUONET_VER 0.1.1
+
 ########################################
 # History  
 # 2015-11-27 v0.0.1 First Version
+# 2015-12-23 v0.1.0 Push Online-test Version
 ########################################
 ########################################
 #Official Code by docker-library, https://hub.docker.com/_/tomcat/
@@ -47,8 +51,6 @@ RUN set -x \
 
 #########################################[START]!Pause official code to deploy yihuonet code.
 ENV TOMCAT_ORIGIN_ROOT webapps/ROOT
-#Version Define
-ENV YIHUONET_VER 0.1.0
 ENV MCMS_DOWNLOAD_FILE http://7xoylx.com1.z0.glb.clouddn.com/yihuonet/yihuonet-v$YIHUONET_VER.zip
 
 #Deploy AND Delete origin root directory
