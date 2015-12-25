@@ -4,7 +4,7 @@ MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-12-23 15:06
 
 #Version Define
-ENV YIHUONET_VER 0.1.2
+ENV YIHUONET_VER 0.1.3
 
 ########################################
 # History  
@@ -18,7 +18,6 @@ ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
-
 
 ENV TOMCAT_MAJOR 7
 ENV TOMCAT_VERSION 7.0.67
@@ -34,7 +33,7 @@ RUN set -x \
 
 #########################################[START]!Pause official code to deploy yihuonet code.
 ENV TOMCAT_ORIGIN_ROOT webapps/ROOT
-ENV MCMS_DOWNLOAD_FILE http://7xoylx.com1.z0.glb.clouddn.com/yihuonet/yihuonet-v$YIHUONET_VER.zip
+ENV MCMS_DOWNLOAD_FILE http://yihuonet.vpc100-oss-cn-hangzhou.aliyuncs.com/yihuonet-official-website/-v$YIHUONET_VER.zip
 
 #Deploy AND Delete origin root directory
 RUN apt-get install -y wget unzip
