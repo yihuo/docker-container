@@ -43,7 +43,7 @@ RUN rm -rf ROOT
 RUN mkdir ROOT
 WORKDIR $CATALINA_HOME/$TOMCAT_ORIGIN_ROOT
 RUN wget $MCMS_DOWNLOAD_FILE
-RUN unzip mcms-vYIHUONET_MCMS_VER.zip
+RUN unzip mcms-v$YIHUONET_MCMS_VER.zip
 ADD tomcat/conf/server.xml $CATALINA_HOME/conf/server.xml
 #########################################[END]!Recovery official code to deploy yihuonet code.
 WORKDIR $CATALINA_HOME/webapps
