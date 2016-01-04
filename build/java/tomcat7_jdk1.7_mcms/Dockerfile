@@ -34,7 +34,7 @@ RUN set -x \
 
 #########################################[START]!Pause official code to deploy yihuonet code.
 ENV TOMCAT_ORIGIN_ROOT webapps/ROOT
-ENV MCMS_DOWNLOAD_FILE http://a.oss.yihuonet.com/program-base/mcms/mcms-vYIHUONET_MCMS_VER.zip
+ENV MCMS_DOWNLOAD_FILE http://a.oss.yihuonet.com/program-base/mcms/mcms-v$YIHUONET_MCMS_VER.zip
 
 #Deploy AND Delete origin root directory
 RUN apt-get install -y wget unzip
