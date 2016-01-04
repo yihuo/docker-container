@@ -4,7 +4,7 @@ MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-12-23 15:06
 
 #Version Define
-ENV YIHUONET_MCMS_VER 1.0.1
+ENV YIHUONET_MCMS_VER 1.0.2
 
 ########################################
 # History  
