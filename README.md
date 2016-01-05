@@ -2,7 +2,7 @@
 ##Docker-container是什么?<br/>What's Docker-container?
 
 <br/>一个支持Java、PHP的混合式Docker容器库，本项目暂时处于开发环节，您通过Dockerfile文件生成的Docker应用可能会出现各种意想不到的情况，请不要在生产环境使用。
-<br/>
+<br/>A container warehouse which support java and php, this project on building now. When you use the dockerfile to build your docker app may happened such more situation we don't want to see it, so please don't use it in formal environment.
 
 
 <br/>
@@ -28,14 +28,14 @@
 * LICENSE.md ： 开源许可协议文件。
 			
 
-##问题反馈
+##问题反馈<br/>Feedback question
 在使用中有任何问题，欢迎反馈给，可以用以下联系方式取得联系：
 
 * 邮件： kai.zhu#yihuonet.com, 把#换成@
 * 官方网站: [易活网络](http://www.yihuonet.com)
 
 
-##感激
+##感激<br/>Thanks
 感谢以下的项目,排名不分先后
 
 * [Test](http://www.example.com/) 
