@@ -1,6 +1,5 @@
 ![Docker-container]<!--(mahua-logo.jpg)-->
-##Docker-container是什么?
-##What's Docker-container?
+##Docker-container是什么?<br/>What's Docker-container?
 
 <br/>一个支持Java、PHP的混合式Docker容器库，本项目暂时处于开发环节，您通过Dockerfile文件生成的Docker应用可能会出现各种意想不到的情况，请不要在生产环境使用。
 <br/>
@@ -8,8 +7,7 @@
 
 <br/>
 
-##目录说明
-##The note of directory
+##目录说明<br/>The note of directory
 
 * build 目录 ： Docker构建环境的主目录。
     * html 目录 
