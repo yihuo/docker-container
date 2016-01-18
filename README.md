@@ -1,6 +1,5 @@
-![Docker-container](opt/Docker-container.jpg)
-##Docker-container是什么?  
-What's Docker-container?
+![Docker-container](opt/Docker-container.png)
+##Docker-container是什么? - What's Docker-container?
 
   
 一个支持Java、PHP的混合式Docker容器库，本项目暂时处于开发环节，您通过Dockerfile文件生成的Docker应用可能会出现各种意想不到的情况，请不要在生产环境使用。
@@ -10,8 +9,7 @@ A container warehouse which support java and php, this project on building now. 
 
   
   
-##目录说明  
-The note of directory
+##目录说明 - The note of directory
 
 * build 目录 ： Docker构建环境的主目录。
     * html 目录 
@@ -54,8 +52,7 @@ The note of directory
 
   
   
-##问题反馈  
-Feedback question  
+##问题反馈 - Feedback question  
 
 在使用中有任何问题，欢迎反馈，可以用以下联系方式取得联系：  
   
@@ -66,8 +63,7 @@ If you has any question in use, please contact with us by below way. We hope to 
 
   
   
-##感激  
-Thanks
+##感激 - Thanks
 感谢以下的项目,排名不分先后  
 Thanks to the following items withour ranking.
 
