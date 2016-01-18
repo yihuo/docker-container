@@ -1,12 +1,17 @@
 ![Docker-container](opt/Docker-container.jpg)
-##Docker-container是什么?<br/>What's Docker-container?
+##Docker-container是什么?  
+What's Docker-container?
 
-<br/>一个支持Java、PHP的混合式Docker容器库，本项目暂时处于开发环节，您通过Dockerfile文件生成的Docker应用可能会出现各种意想不到的情况，请不要在生产环境使用。
-<br/>A container warehouse which support java and php, this project on building now. When you use the dockerfile to build your docker app may happened such more situation we don't want to see it, so please don't use it in formal environment.
+  
+一个支持Java、PHP的混合式Docker容器库，本项目暂时处于开发环节，您通过Dockerfile文件生成的Docker应用可能会出现各种意想不到的情况，请不要在生产环境使用。
+  
+A container warehouse which support java and php, this project on building now. When you use the dockerfile to build your docker app may happened such more situation we don't want to see it, so please don't use it in formal environment.
 
 
-<br/>
-##目录说明<br/>The note of directory
+  
+  
+##目录说明  
+The note of directory
 
 * build 目录 ： Docker构建环境的主目录。
     * html 目录 
@@ -25,7 +30,10 @@
 * opt 目录 ： 用于本Git库部分相关数据的存放，即使丢失亦不影响该库的正常使用。
 * README.md ： 本文件，说明文件。
 * LICENSE.md ： 开源许可协议文件。
-<br/><br/><br/>		
+      
+      
+    
+	
 * build directory ： The build environment of docker.
     * html directory 
         * nginx directory ：
@@ -44,17 +52,23 @@
 * README.md ： This file which give a readme to everyone.
 * LICENSE.md ： License file.	
 
-<br/>
-##问题反馈<br/>Feedback question
-在使用中有任何问题，欢迎反馈，可以用以下联系方式取得联系：<br/>
+  
+  
+##问题反馈  
+Feedback question  
+
+在使用中有任何问题，欢迎反馈，可以用以下联系方式取得联系：  
+  
 If you has any question in use, please contact with us by below way. We hope to get your feedback.
 
 * 邮件/E-mail： kai.zhu#yihuonet.com （把#换成@，to convert # to @）
 * 官方网站: [易活网络 Yihuonet](http://www.yihuonet.com)
 
-<br/>
-##感激<br/>Thanks
-感谢以下的项目,排名不分先后<br/>
+  
+  
+##感激  
+Thanks
+感谢以下的项目,排名不分先后  
 Thanks to the following items withour ranking.
 
 * [Test](http://www.example.com/) 
