@@ -1,4 +1,4 @@
-![Docker-container](opt/Docker-container.png)
+![Docker-container](http://a.oss.yihuonet.com/storage/Docker-container.png)
 ##Docker-container是什么? - What's Docker-container?
 
   
