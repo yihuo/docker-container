@@ -15,17 +15,17 @@ A container warehouse which support java and php, this project on building now. 
     * html 目录 
         * nginx 目录 ：
             * 功能：暂仅支持nginx容器，采用Debian Jessie + Nginx1.9.8 实现纯静态html网站的部署。
-            * 版权说明：基于***构建，原地址为：*
+            * 版权说明：基于Docker下列官方库debian:jessie、nginx:latest构建。
             * 使用方法：
         * java 目录 ：
             * 功能：支持Tomcat和wildfly（即jboss）两种容器，基于OpenJDK1.7和OpenJDK1.6两种基础Docker镜像构建，实现Java网站的部署。 
-            * 版权说明：基于***构建，原地址为：*
+            * 版权说明：基于Docker下列官方库Tomcat(OpenJDK1.6 OpenJDK1.7)、Wildfly构建。
     		* 使用方法：
         * nginx-proxy 目录 ：
             * 功能：实现将Docker应用的访问方式从IP:PORT（IP地址加端口）变为直接通过域名访问，无需加端口访问。
-			* 版权说明：基于***构建，原地址为：*
+			* 版权说明：基于Docker镜像Jwilder/nginx-proxy构建。
 			* 使用方法：
-* opt 目录 ： 用于本Git库部分相关数据的存放，即使丢失亦不影响该库的正常使用。
+* opt 目录 ： 用于本Git库部分其他数据的存放，即使丢失亦不影响该库的正常使用。
 * README.md ： 本文件，说明文件。
 * LICENSE.md ： 开源许可协议文件。
       
@@ -36,15 +36,15 @@ A container warehouse which support java and php, this project on building now. 
     * html directory 
         * nginx directory ：
             * Function：Only support nginx container now, use Debian Jessie + Nginx1.9.8 to support html website deploy.
-            * License：Based by *, Origin URL is： *
+            * License：Build based by Docker official images "Debian:jessie" and "nginx:latest".
             * Usage：
         * java directory ：
             * Function：Support Tomcat and wildfly(old name is jboss), based OpenJDK1.7 and OpenJDK1.6 images to develop, support java website deploy. 
-            * License：Based by *, Origin URL is： *
+            * License：Build based by Docker official images "Tomcat(OpenJDK1.6 OpenJDK1.7)" and "Wildfly".
     		* Usage：
         * nginx-proxy directory ：
             * Function：To realize visit docker app from ip:port to domain, you can visit docker app by domain to instead ip:port from today.
-			* License：Based by *, Origin URL is： *
+			* License：Build based by Docker images "Jwilder Nginx-proxy".
 			* Usage：
 * opt directory ： To save some data with this git, the github will be normal use if this directory lost.
 * README.md ： This file which give a readme to everyone.
@@ -64,8 +64,11 @@ If you has any question in use, please contact with us by below way. We hope to 
   
   
 ##感激 - Thanks
-感谢以下的项目,排名不分先后  
-Thanks to the following items withour ranking.
+感谢以下的项目,排名不分先后。请在使用时，遵守相关使用协议的约定。  
+Thanks to the following items withour ranking. Please allow the rules of copyrights or license file by this project.
 
-* [Test](http://www.example.com/) 
-
+* [Debian Docker](https://hub.docker.com/_/debian/) 
+* [Nginx Docker](https://hub.docker.com/_/nginx/) 
+* [Tomcat Docker](https://hub.docker.com/_/tomcat/) 
+* [Wildfly(Jboss) Docker](https://hub.docker.com/r/jboss/wildfly/) 
+* [Jwilder/nginx-proxy Docker](https://hub.docker.com/r/jwilder/nginx-proxy/) 
