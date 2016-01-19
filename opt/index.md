@@ -91,4 +91,5 @@
     
 到这里，Docker的基本概念已经说完了。如果不是云里雾里的，只有两种情况，    
 一个是压根没看进去，二是……大神你好。    
-[点击这里进入传送门](first-docker-deploy.html "[first-docker-deploy.html]")，进入下一节。
+[点击这里进入传送门](first-docker-deploy.html "[first-docker-deploy.html]")，进入下一节。    
+[点击这里进入传送门-in Github](first-docker-deploy.md "[first-docker-deploy.md]")，进入下一节。

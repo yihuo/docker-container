@@ -50,10 +50,11 @@ PS：按这么说，我们这个应用域名是cms.com.yh？ 是的，然而yh�
 ##5.怎么样才能不加端口进行访问？
 看见刚才的应用是需要加端口才能访问的，有没有一种感觉叫“我勒个去啊”，这样用户怎么记得端口。当然这是有解决方案的。易活网络提供的GitHub库中，提供了一个叫做NginxProxy的Docker镜像，可以实现将IP/域名加端口的访问形式变为直接输入域名访问，原理：Nginx反向代理。   
 用Nginx作为前端负载均衡加反向代理，基本上对于不是很大的网站来说，是足够了。
-这里我们只说如何使用，至于这个Nginx-Proxy如何安装，请看[传送门](setup-nginx-proxy.html "[setup-nginx-proxy.html]")。
+这里我们只说如何使用，至于这个Nginx-Proxy如何安装，请看[传送门](setup-nginx-proxy.html "[setup-nginx-proxy.html]") [传送门-in Github](setup-nginx-proxy.md "[setup-nginx-proxy.md]")。
 
 ----------
     
 到这里，Docker的基本概念已经说完了。如果不是云里雾里的，只有两种情况，    
 一个是压根没看进去，二是……大神你好。    
-[点击这里进入传送门](first-docker-deploy.html "[first-docker-deploy.html]")，进入下一节。
+[点击这里进入传送门](first-docker-deploy.html "[first-docker-deploy.html]")，进入下一节。    
+[点击这里进入传送门-in Github](first-docker-deploy.md "[first-docker-deploy.md]")，进入下一节。
