@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>index</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>欢迎使用易活网络Docker培训指南</h1>
+<p><img src="http://a.oss.yihuonet.com/storage/Docker-container.png" alt="Docker-container" />    <br />
+此指南基于MIT协议并持续完善中，欢迎给予各种意见和建议，我们将积极采纳。我们希望能够变得更好，并且不作恶！   <br />
+更新于：2016/1/19 13:32:20 | E-mail:kai.zhu#yihuonet.com (替换#为@)  <br />
+本章节是入门导航。</p>
+<h2>1.Docker基础知识</h2>
+<h3>Docker是什么？</h3>
+<blockquote>
+<p>Docker是开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）。—— 引自：百度百科</p>
+</blockquote>
+<p>相关概念：</p>
+<ul>
+<li>容器（Container）：在Docker下，一般指应用程序及依赖、系统的集合。</li>
+<li>沙箱（Sandbox）：在Docker下，容器一旦重启/重新部署，没有进行commit保存的内容都将被丢失。Docker基于LXC技术，避免了容器对底层真实的操作系统的损害，可以理解为“绿色软件”。</li>
+<li>Dockerfile：Dockerfile是一个镜像的表示,可以通过Dockerfile来描述构建镜像的步骤,并自动构建一个容器。避免了传统的使用命令手动构建镜像导致的镜像可移植性等问题。</li>
+<li>Docker-container：易活网络定制的，基于MIT协议的混合式容器框架。提供多种Dockerfile。</li>
+</ul>
+<h2>2.我们能用Docker做什么？</h2>
+<blockquote>
+<p>Ok, That's everything! </p>
+</blockquote>
+<p><strong>开发角度：</strong>  <br />
+* 在生产环境开发！开发环境与测试环境、生产环境一致性。  <br />
+* 一行“From $images”，基于基础镜像解决All！无需告诉其他人，依赖性、操作系统要求。升降级不用陪着运维加班值守了。  <br />
+* </p>
+<p><strong>测试角度：</strong>  <br />
+* 自己安装测试环境！不用追着开发，什么时候上传安装测试环境？改了BUG怎么没上传？测试也会搭环境，再不被开发嫌弃了。  <br />
+* 兼容性再也不是问题，生产环境与测试环境完全一致！再也不担心发布之后和测试的时候不一样了。  <br />
+* </p>
+<p><strong>运维角度：</strong>  <br />
+* 发布再也不用加班看时间！发布新的容器，直接删除老的容器，SLB下直接秒切换，高峰期都敢升级版本。再也没有误操作的问题了！  <br />
+* </p>
+<h2>3.想用Docker需要装什么软件么？需要会什么语言？</h2>
+<p>对于不同的角色，需要了解不同的软件或相关程序。对于语言，如果Git命令和Docker命令算的话……它们的命令语法只有一种：“[Command][Parameter 1](……[Parameter n])”</p>
+<ul>
+<li>Git：版本控制工具。—— 通用。</li>
+<li>Docker：Docker程序、Daocloud（Docker图形化管理界面，非必选）。 —— 仅运维人员会安装、调试等。</li>
+</ul>
+<h2>4.Daocloud是什么？</h2>
+<p>这是一个很赞的图形化Docker控制面板，Docker标准的执行方式是命令行，对于“拿来主义”，使用起来方便是第一要务。当使用图形化界面了解整个流程后，建议再学习命令行的方式，以提高效率。当然Daocloud的面板还完成了Docker完成起来比较困难的或者繁琐的操作。<a href="http://www.daocloud.io" title="[Daocloud]">传送门</a> <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Daocloud-index.png" alt="Daocloud-index" /></p>
+<h2>5.典型的持续构建、持续集成模型。</h2>
+<p><strong>一个标准的应用部署流程可以定义为：代码构建 -&gt; 生成镜像 -&gt; 使用镜像创建应用 。</strong></p>
+<p>相关概念：</p>
+<ul>
+<li>
+<p>镜像（images）：包含应用自身、依赖关系程序、应用运行容器、操作系统环境变量、操作系统等，我们定义这样的为一个Docker镜像。如一个典型的Java网站，上述包含的有：应用自身（网站程序war包或zip包）、依赖关系程序（JDK）、应用运行容器（Tomcat、Wildfly或者商业性的容器）、操作系统（Linux特定的发行版）。而传统的方式下，开发人员需要写明每个指定的版本是什么，或者需要和运维人员合力完成这样一个工作（针对中小型企业，本文包括后续的文章都不说大型企业的标准化流程，我们只求变得更好）。     <br />
+而镜像完成了将这个操作从说明如何操作，转变为直接给予操作好的镜像（即产品）。—— 我们建议开发人员、测试人员、运维人员分别采用不同的分支进行操作，这样可以实现发布到指定的分支时，自动构建生产环境镜像并自动发布。</p>
+</li>
+<li>
+<p>代码构建：传统的代码构建，是将代码包、数据库、安装脚本等提供给运维人员进行安装的过程。在持续构建的概念下，我们将代码开发完成后， 需要生成镜像（上面描述了什么是镜像）。</p>
+</li>
+<li>
+<p>Git分支与Docker镜像版本的概念：    
+</p>
+<blockquote>
+<p><strong>分支：我们建议在软件生命周期中采用下列几个分支。</strong>  <br />
+1. Master 分支，在该分支上不做开发/发布，只做开发分支的合并。并基于master分支创建Release分支。——该分支应严格受控，即master分支应该可以直接被用于创建一个新的Release分支。  <br />
+2. Dev-*** 形式的分支:由开发人员创建的分支，用于功能的开发，非受控。（可选：如果日常项目开发采用svn，可以考虑迁移git。也可以仅用git作为发布工具）  <br />
+3. Test-*** 形式的分支：由测试人员基于Master分支创建的分支，用于构建测试镜像。（可选：小公司/小项目可以直接依据有tag的Master分支进行测试，而不是专门建立临时性的Test分支）  <br />
+4. Release-*** 形式的分支：由运维人员基于Master分支创建的分支，用于持续集成和持续构建，并自动化发布生产环境。    
+</p>
+<p><strong>Docker镜像版本与Git分支的关系：</strong>  <br />
+根据我们上述建立的生命周期分支模型,镜像的名称一般以下列形式构成：  <br />
+项目名称+Git分支名称+版本号（形如：Project-Release-1.1.3-[系统生成的版本号]、Project-Test-1.1.3-[系统生成的版本号]、Project-Dev-sendmessages-20160119-[系统生成的版本号] 等）。    
+</p>
+<blockquote>
+<p><strong>开发人员：</strong>一般是项目开发负责人进行操作，大的项目由各个模块的负责人进行操作。例如我们在开发一个短信发送模块或者该模块开发完成自行测试的时候，可以依据这个阶段采取如下形式命名:
+Project-Dev-(开发的功能名称或者修复bug的名称，也可以是通俗易懂的缩写)-（其他你想加上的识别字符）-[系统生成的版本号]。  <br />
+例：  <br />
+Project-Dev-Sendmessages-20160119-[系统生成的版本号，不需填写这部分]，  <br />
+Project-Dev-Sendmessages-bugfixunicom-[系统生成的版本号，不需填写这部分]。</p>
+<p><strong>测试人员：</strong>当开发负责人员将代码合并入Master分支，即可进入测试阶段。因为我们之前定义了Master分支是随时可以发布的分支（当然可以进行测试）。测试人员基于Master制定的tag创建Test分支，使用测试数据和脚本进行测试。
+Project-Test-(正式版本号)-[系统生成的版本号]。  <br />
+例：  <br />
+Project-Test-1.1.14-[系统生成的版本号，不需填写这部分]，  <br />
+Project-Test-2.3.04-[系统生成的版本号，不需填写这部分]。</p>
+<p><strong>运维人员：</strong>在Docker模型中，运维人员只需要依据Master分支上，经过测试人员验证无误的tag创建Release分支，然后……没有然后了。后续的操作都是Docker控制下的自动环节，因而同时发布100个应用和同时发布1个应用并没有什么区别，传统的方式下，发布100个应用基本可以耗费一天的时间了。在Docker下，只需要一杯咖啡的时间。运维人员在Docker的工作主要体现在：在真实的机器上创建Docker环境并进行基础性、架构方面的维护，避免重复无价值的劳动。
+Project-Release-1.1.14-[系统生成的版本号，不需填写这部分]，  <br />
+Project-Release-2.3.04-[系统生成的版本号，不需填写这部分]。    
+</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p>下面给出<strong>git版本号</strong>和<strong>[系统生成的版本号]</strong>关系：  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/automatic-version-code-with-github.png" alt="Docker Project automatic version number with git" />  <br />
+我们第一个操作是直接将Master分支进行了Git Push操作，并手动构建了镜像用于测试。  <br />
+而后测试无误，用这个Master分支创建了Release分支，进行了自动构建（持续构建）、自动部署（持续集成）。</p>
+<hr />
+<p>到这里，Docker的基本概念已经说完了。如果不是云里雾里的，只有两种情况，  <br />
+一个是压根没看进去，二是……大神你好。  <br />
+<a href="first-docker-deploy.html" title="[first-docker-deploy.html]">点击这里进入传送门</a>，进入下一节。</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
