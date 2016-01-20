@@ -1,11 +1,11 @@
 #Base Define
 FROM daocloud.io/library/java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
-ENV REFRESHED_AT 2015-12-23 15:06
+ENV REFRESHED_AT 2016-01-20 15:15
 
 #Version Define - !!!!!!!!!!!!!!!MUST REVISE HERE FIRST!!!!!!!!!!!!!!!!!!!!!
 ENV YIHUONET_MCMS_SERIES general-1
-ENV YIHUONET_MCMS_VER 1.1.1
+ENV YIHUONET_MCMS_VER 1.0.1
 ENV YIHUONET_MCMS_FILENAME mcms-$YIHUONET_MCMS_SERIES-v$YIHUONET_MCMS_VER.zip
 ########################################
 # History  
