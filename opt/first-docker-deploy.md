@@ -46,7 +46,8 @@ PS：按这么说，我们这个应用域名是cms.com.yh？ 是的，然而yh�
 下面是Docker进行部署应用的界面，日志可以随时查看并自动刷新，我们可以看看Docker到底做了什么。
 ![Daocloud-index-images-mcms-deploy4](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy4.png)
 经过几分钟到最长20分钟的等待（20分钟执行无法完成将认为超时失败），应用成功部署完成。日志中显示:    
-`Server startup in 9185ms    #此处显示的完成日志输出，取决于应用内容器（此处的容器和应用容器不是一个概念，这里的容器特指Tomcat/Apache\Nginx……）。` 
+`Server startup in 9185ms`    
+`#此处显示的完成日志输出，取决于应用内容器（此处的容器和应用容器不是一个概念，这里的容器特指Tomcat/Apache\Nginx……）。` 
 ![Daocloud-index-images-mcms-deploy5](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy5.png)
 那么问题来了，我们如何访问这个已经部署成功的应用。方法：切换到容器选项卡，即可看到Docker自动分配的端口和访问地址。Docker提供了三个IP+Port的访问形式：    
 10.0.0.15的IP是作者办公局域网的机器地址，也是真实的地址；

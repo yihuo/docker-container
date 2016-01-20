@@ -1,4 +1,5 @@
 #Base Define
+#This file temporary unuse.
 FROM daocloud.io/library/java:7-jre
 MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2015-12-23 15:06
