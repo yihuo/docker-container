@@ -35,7 +35,7 @@
 * 
 
 ##3.想用Docker需要装什么软件么？需要会什么语言？
-对于不同的角色，需要了解不同的软件或相关程序。对于语言，如果Git命令和Docker命令算的话……它们的命令语法只有一种：“[Command][Parameter 1](……[Parameter n])”
+对于不同的角色，需要了解不同的软件或相关程序。对于语言，如果Git命令和Docker命令算的话……它们的命令语法只有一种：“\[Command]\(Parameter 1)(……[Parameter n])”
 
 * Git：版本控制工具。—— 通用。
 * Docker：Docker程序、Daocloud（Docker图形化管理界面，非必选）。 —— 仅运维人员会安装、调试等。

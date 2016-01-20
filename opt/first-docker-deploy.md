@@ -45,16 +45,33 @@ PS：按这么说，我们这个应用域名是cms.com.yh？ 是的，然而yh�
 ![Daocloud-index-images-mcms-deploy3](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy3.png)
 下面是Docker进行部署应用的界面，日志可以随时查看并自动刷新，我们可以看看Docker到底做了什么。
 ![Daocloud-index-images-mcms-deploy4](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy4.png)
-
+经过几分钟到最长20分钟的等待（20分钟执行无法完成将认为超时失败），应用成功部署完成。日志中显示:    
+`Server startup in 9185ms    #此处显示的完成日志输出，取决于应用内容器（此处的容器和应用容器不是一个概念，这里的容器特指Tomcat/Apache\Nginx……）。` 
+![Daocloud-index-images-mcms-deploy5](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy5.png)
+那么问题来了，我们如何访问这个已经部署成功的应用。方法：切换到容器选项卡，即可看到Docker自动分配的端口和访问地址。Docker提供了三个IP+Port的访问形式：    
+10.0.0.15的IP是作者办公局域网的机器地址，也是真实的地址；
+60.167.109.63这个是网关地址（PS：不用尝试了，所有正常的端口都没开）；
+还有一个172.17.0.0网段的IP……这个所有的Docker机器都会显示这样一个，这是Docker容器与其宿主机通信的IP，Docker在宿主机上创建了一个网卡/网桥用于通信。（我们这里暂时用不着）
+![Daocloud-index-images-mcms-deploy6](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy6.png)
+尝试进行访问，http://10.0.0.15:32779，访问正常！
+![Daocloud-index-images-mcms-deploy7](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy7.png)
 
 ##5.怎么样才能不加端口进行访问？
-看见刚才的应用是需要加端口才能访问的，有没有一种感觉叫“我勒个去啊”，这样用户怎么记得端口。当然这是有解决方案的。易活网络提供的GitHub库中，提供了一个叫做NginxProxy的Docker镜像，可以实现将IP/域名加端口的访问形式变为直接输入域名访问，原理：Nginx反向代理。   
+看见刚才的应用是需要加端口才能访问的，有没有一种感觉叫“我勒个去啊”，这样用户怎么记得端口（而且Docker应用的端口还会随着应用重新不断变化）。当然这是有解决方案的。易活网络提供的GitHub库中，提供了一个叫做NginxProxy的Docker镜像（非原创，感谢[Jwilder/nginx-proxy Docker](https://hub.docker.com/r/jwilder/nginx-proxy/)），可以实现将IP/域名加端口的访问形式变为直接输入域名访问，原理：Nginx反向代理。   
 用Nginx作为前端负载均衡加反向代理，基本上对于不是很大的网站来说，是足够了。
-这里我们只说如何使用，至于这个Nginx-Proxy如何安装，请看[传送门](setup-nginx-proxy.html "[setup-nginx-proxy.html]") [传送门-in Github](setup-nginx-proxy.md "[setup-nginx-proxy.md]")。
+这里我们只说如何使用，至于这个Nginx-Proxy如何安装，请看[传送门](setup-nginx-proxy.html "[setup-nginx-proxy.html]") [传送门-in Github](setup-nginx-proxy.md "[setup-nginx-proxy.md]")。    
+当然，这个Nginx-Proxy也是工作在Docker环境内的，安装起来和正常的Docker应用一样安装。如果你按照上述传送门的说明，在每一台宿主机上安装了Nginx-Proxy应用。那么这里就可以用一个环境变量完成域名的绑定工作。    
+添加一个环境变量：`VIRTUAL_HOST`，值为你希望绑定的域名，上述我们假定绑定的域名为“cms.com.yh”。点击保存更改，会提示重新部署应用。如果你已经设置好了类似于Upload、Attachments等等安装后会发生变化的目录的Volumes，这时就可以点击确认，否则**请先做好数据保存及Volumes的设置工作**。—— 当然这个`VIRTUAL_HOST`环境变量是可以在创建应用的时候就设置的。
+![Daocloud-index-images-mcms-deploy8](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy8.png)
+坐等重新部署完成，输入http://cms.com.yh/ 完美解析成功。
+![Daocloud-index-images-mcms-deploy9](http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy9.png)
+
+Why？每一台都要安装是为什么？    
+答案是：你不给每台宿主机装一个Nginx-Proxy。域名只能解析到你的宿主机IP（一般是公网IP或者网关IP，内部测试用可以解析到内网IP，然而Docker的那个IP和你并没有什么卵关系。），然而宿主机怎么知道你想“转发”到那个Docker应用？只有用Nginx-Proxy去充当反向代理，同时去监控Docker的内核（管理IP和Port），才能去实现这样一个转发。
 
 ----------
     
-到这里，Docker的基本概念已经说完了。如果不是云里雾里的，只有两种情况，    
-一个是压根没看进去，二是……大神你好。    
-[点击这里进入传送门](first-docker-deploy.html "[first-docker-deploy.html]")，进入下一节。    
-[点击这里进入传送门-in Github](first-docker-deploy.md "[first-docker-deploy.md]")，进入下一节。
+到此，说完了如何利用Daocloud去部署第一个项目的第一个应用，其他功能自行琢磨。    
+下一节，我们展示如何自动化升级一个应用（持续构建和持续集成），然而篇幅小的你不敢相信。    
+[点击这里进入传送门](first-docker-deploy-automatic.html "[first-docker-deploy-automatic.html]")，进入下一节。    
+[点击这里进入传送门-in Github](first-docker-deploy-automatic.md "[first-docker-deploy-automatic.md]")，进入下一节。
