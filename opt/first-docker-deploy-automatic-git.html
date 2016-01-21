@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>first-docker-deploy-automatic</title>
+<title>first-docker-deploy-automatic-git</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
 /* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
@@ -292,28 +292,11 @@ img {
 </head>
 <body>
 <h1>欢迎使用易活网络Docker培训指南</h1>
-<h1>《依据Dockerfile自动化构建及发布应用》</h1>
+<h1>《Git和Dockerfile集成的威力：一行命令完成发布》</h1>
 <p><img src="http://a.oss.yihuonet.com/storage/Docker-container.png" alt="Docker-container" />    <br />
 此指南基于MIT协议并持续完善中，欢迎给予各种意见和建议，我们将积极采纳。我们希望能够变得更好，并且不作恶！   <br />
 更新于：2016/1/20 15:27:03  | E-mail:kai.zhu#yihuonet.com (替换#为@)  <br />
-本章节主要说明了如何利用Daocloud进行持续构建和持续集成，<a href="first-docker-deploy-automatic.html" title="[first-docker-deploy.html]">基于上一节构建的Java CMS项目</a>(<a href="first-docker-deploy-automatic.md" title="[first-docker-deploy.md]">Github MD地址</a>)，当然这类的工具还是很多的，可以自由选择，这不是软文。</p>
-<h2>1.自动构建</h2>
-<p>找到代码构建中，java-cms项目，并将“触发规则”进行设置。我们定义自动构建和自动部署都是基于Release分支的，进行自动化生产环境部署，而测试和开发的环境，采用手动构建方式。
-<img src="http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy-automatic.png" alt="Daocloud-index-images-mcms-automatic" />
-触发规则填写如下图，当基于Master分支创建“Release-”开头的分支时，将自动创建最新镜像。
-<img src="http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy-automatic2.png" alt="Daocloud-index-images-mcms-automatic2" /></p>
-<h2>2.自动部署（发布到最新版本）</h2>
-<p>找到应用列表中，应用的发布选项卡，将“自动发布”开启。此时当最新的镜像构建成功后，将自动进行发布。  <br />
-在这里我们需要注意的是，这里的自动发布并不会识别分支是否为Release分支，即使是Test和Dev、Master分支手动构建了最新镜像后，仍然会自动发布。  <br />
-解决办法：  <br />
-A.创建一个项目的时候，生产环境和开发测试环境进行分离，当作两个项目进行设置。这样就不会出现误将测试或者正在开发的项目发布到生产环境了。  <br />
-B.或者就干脆不要用“自动发布”，当然这需要运维人员升级时手动点一下。—— 应用数量多的话，确实是个不小的挑战。
-<img src="http://a.oss.yihuonet.com/storage/guide-book/Daocloud-images-mcms-deploy-automatic3.png" alt="Daocloud-index-images-mcms-automatic3" /></p>
-<h2>3.怎样结合Git去实现自动化构建及发布？</h2>
-<hr />
-<p>自动化升级一个应用（持续构建和持续集成）已经介绍完了。  <br />
-<a href="first-docker-deploy-automatic-git.html" title="[first-docker-deploy-automatic-git.html]">点击这里进入传送门</a>，进入下一节。  <br />
-<a href="first-docker-deploy-automatic-git.md" title="[first-docker-deploy-automatic-git.md]">点击这里进入传送门-in Github</a>，进入下一节。</p>
+本章节主要说明了如何利用Git实现自动更新应用，<a href="first-docker-deploy-automatic.html" title="[first-docker-deploy.html]">基于之前构建的Java CMS项目</a>(<a href="first-docker-deploy-automatic.md" title="[first-docker-deploy.md]">Github MD地址</a>)，当然这类的工具还是很多的，可以自由选择，这不是软文。</p>
 
 </body>
 </html>

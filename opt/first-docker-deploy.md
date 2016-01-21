@@ -1,7 +1,8 @@
 #欢迎使用易活网络Docker培训指南
+#《依据Dockerfile手动的创建一个Java CMS项目并发布》
 ![Docker-container](http://a.oss.yihuonet.com/storage/Docker-container.png)      
 此指南基于MIT协议并持续完善中，欢迎给予各种意见和建议，我们将积极采纳。我们希望能够变得更好，并且不作恶！     
-更新于：2016/1/19 13:32:20 | E-mail:kai.zhu#yihuonet.com (替换#为@)    
+更新于：2016/1/20 9:32:19  | E-mail:kai.zhu#yihuonet.com (替换#为@)    
 本章节主要说明了如何手动的利用Daocloud创建一个Java CMS项目并实现发布，当然这类的工具还是很多的，可以自由选择，这不是软文。
 
 ##1.Daocloud界面初识
