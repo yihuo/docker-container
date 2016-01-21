@@ -305,9 +305,10 @@ img {
 <p>相关概念：</p>
 <ul>
 <li>容器（Container）：在Docker下，一般指应用程序及依赖、系统的集合。</li>
-<li>沙箱（Sandbox）：在Docker下，容器一旦重启/重新部署，没有进行commit保存的内容都将被丢失。Docker基于LXC技术，避免了容器对底层真实的操作系统的损害，可以理解为“绿色软件”。</li>
+<li>沙箱（Sandbox）：在Docker下，容器一旦重启/重新部署，没有进行commit保存的内容都将被丢失。Docker基于LXC技术，避免了容器对底层真实的操作系统的损害，可以理解为“绿色软件”。那说的再简单一些。想象一下，在一个装满了平整细沙的盒子里，我们可以尽情随意地在上面作画、涂写，无论画的好坏，最后轻轻一抹，沙盒又回到了原来的平整状态。沙盒的魅力就在于他允许你出错，还可以给你改正的机会。</li>
 <li>Dockerfile：Dockerfile是一个镜像的表示,可以通过Dockerfile来描述构建镜像的步骤,并自动构建一个容器。避免了传统的使用命令手动构建镜像导致的镜像可移植性等问题。</li>
 <li>Docker-container：易活网络定制的，基于MIT协议的混合式容器框架。提供多种Dockerfile。</li>
+<li>Dockerfile：是一个镜像的表示，可以通过Dockerfile来描述构建镜像的步骤，并自动构建一个容器。所有的 Dockerfile 命令格式都是:INSTRUCTION arguments。</li>
 </ul>
 <h2>2.我们能用Docker做什么？</h2>
 <blockquote>
