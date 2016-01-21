@@ -18,7 +18,7 @@
 >自动构建与自动部署的知识；（本节不含结合Git实现命令行发布介绍，下一节予以介绍）
 
 ###4.Git和Dockerfile集成的威力：一行命令完成发布
->[[传送门]](first-docker-deploy-automactic-git.html "[first-docker-deploy-automactic-git.html]") [[传送门 in Github]](first-docker-deploy-automactic-git.md "[first-docker-deploy-automactic-git.md]")    
+>[[传送门]](first-docker-deploy-automatic-git.html "[first-docker-deploy-automatic-git.html]") [[传送门 in Github]](first-docker-deploy-automatic-git.md "[first-docker-deploy-automatic-git.md]")    
 >Git的简要介绍；Git分支操作；Git与Dockerfile的结合；
 
 
