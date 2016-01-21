@@ -297,6 +297,53 @@ img {
 此指南基于MIT协议并持续完善中，欢迎给予各种意见和建议，我们将积极采纳。我们希望能够变得更好，并且不作恶！   <br />
 更新于：2016/1/20 15:27:03  | E-mail:kai.zhu#yihuonet.com (替换#为@)  <br />
 本章节主要说明了如何利用Git实现自动更新应用，<a href="first-docker-deploy-automatic.html" title="[first-docker-deploy.html]">基于之前构建的Java CMS项目</a>(<a href="first-docker-deploy-automatic.md" title="[first-docker-deploy.md]">Github MD地址</a>)，当然这类的工具还是很多的，可以自由选择，这不是软文。</p>
+<h2>1.Git的简单介绍</h2>
+<p>定义：Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git的读音为/gɪt/。Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+<h2>2.Git的常规命令（只说本文用到和相关的）</h2>
+<p><code>git add &lt;file&gt; #</code>  将工作文件修改提交到本地暂存区  <br />
+<code>git add . #</code>  将所有修改过的工作文件提交暂存区  <br />
+<code>git commit</code>  -m &quot;提交的描述信息&quot;  <br />
+<code>git br &lt;new_branch&gt;</code>  # 创建新的分支  <br />
+<code>git br -d &lt;branch&gt;</code>  # 删除某个分支  <br />
+<code>git br -D &lt;branch&gt;</code>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)  <br />
+<code>git pull</code>  # 抓取远程仓库所有分支更新并合并到本地  <br />
+<code>git pull</code>  --no-ff # 抓取远程仓库所有分支更新并合并到本地，不要快进合并  <br />
+<code>git push</code>  # push所有分支  <br />
+<code>git push origin master</code>  # 将本地主分支推到远程主分支  <br />
+<code>git push -u origin master</code>  # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)  <br />
+<code>git push origin &lt;local_branch&gt;</code>  # 创建远程分支， origin是远程仓库名  <br />
+<code>git push origin &lt;local_branch&gt;:&lt;remote_branch&gt;</code>  # 创建远程分支  <br />
+<code>git push origin :&lt;remote_branch&gt;</code>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支    </p>
+<h2>3.Follow me，执行一次自动构建和部署给你看。</h2>
+<p>首先将在Dev-*****上开发的分支，merge到Master分支。—— 这里不介绍<code>git merge</code>命令，不然会牵扯的太远。  <br />
+我们这里演示发布前文提及的Java CMS网站，如何直接更新生产环境。  <br />
+第一步，应用程序打包为zip包并上传至指定位置，修改Dockerfile文件相关信息。  <br />
+指定位置：由Dockerfile定义，我们这里是在自动构建的时候，采用wget方式从指定的<code>MCMS_DOWNLOAD_FILE</code>环境变量处下载，这个环境变量即为需要上传的位置，并按照<code>YIHUONET_MCMS_FILENAME</code>中约定名称的形式进行命名zip包。  <br />
+我们采用zip包的命名格式为：程序名-系列名称-版本号。
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git2.png" alt="Deploy-docker-with-git2" />  <br />
+第二步，基于Master分支构建Release分支。  <br />
+打开Git Shell（登陆配置、安装Git的过程不复述），进入master分支。如果当前不在master分支，执行<code>git checkout master</code>切换到master分支。  <br />
+下面的操作生效与否，取决于是否参照这篇文章的说明进行了设置，<a href="first-docker-deploy-automatic.html" title="[first-docker-deploy-automatic.html]">[传送门]</a> <a href="first-docker-deploy-automatic.md" title="[first-docker-deploy-automatic.md]">[传送门-in Github]</a>。如未按照上文或者上文的思想进行设置，肯定不会生效。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git.png" alt="Deploy-docker-with-git" />  <br />
+输入<code>git branch Release-general-1-1.0.0</code>创建一个Release分支。其中Release为发布分支的意思，general-1为系列的名字，我们在多个项目公用一个版本库，因而需要进行区分设置。1.0.0是发布的产品版本号。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git3.png" alt="Deploy-docker-with-git3" />  <br />
+输入<code>git checkout Release-general-1-1.0.0</code>切换到刚才创建的分支。  <br />
+这时，系统给出了提示？好吧，正常情况是不该有提示的，然而我们正在写这篇MD文章，所以……这个问题可以愉快的忽略。继续执行。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git4.png" alt="Deploy-docker-with-git4" />  <br />
+输入<code>git commit</code>确认一下问题，的确是只有这两个md文件，那么果断忽略。执行最后一步操作。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git5.png" alt="Deploy-docker-with-git5" />  <br />
+输入<code>git push origin Release-general-1-1.0.0:Release-general-1-1.0.0</code>，但暂时先不执行。我们先打开Daocloud的控制台，看一下上次的执行情况，看看是否真的自动构建了。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git6.png" alt="Deploy-docker-with-git6" />  <br />
+按下回车之后，立即自动创建了一个镜像构建任务，并且“开始执行”。  <br />
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git7.png" alt="Deploy-docker-with-git7" />  <br />
+当镜像自动构建完成后，进入应用列表，找到基于这个镜像构建的应用。看见“事件”选项卡中，这个应用已经根据最新的镜像开始了自动发布。  <br />
+那么我们还要做什么么？  <br />
+Anything？No,nothing else……
+<img src="http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git8.png" alt="Deploy-docker-with-git8" />    </p>
+<hr />
+<p>Git和Dockerfile集成的威力：一行命令完成发布，已经介绍完了。  <br />
+<a href="first-docker-deploy-automatic-git.html" title="[#]">点击这里进入传送门</a>，进入下一节。  <br />
+<a href="first-docker-deploy-automatic-git.md" title="[#]">点击这里进入传送门-in Github</a>，进入下一节。</p>
 
 </body>
 </html>

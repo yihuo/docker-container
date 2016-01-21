@@ -33,18 +33,18 @@
 ![Deploy-docker-with-git2](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git2.png)    
 第二步，基于Master分支构建Release分支。    
 打开Git Shell（登陆配置、安装Git的过程不复述），进入master分支。如果当前不在master分支，执行`git checkout master`切换到master分支。    
-下面的操作生效与否，取决于是否参照这篇文章的说明进行了设置，[[传送门]](first-docker-deploy-automatic.html "[first-docker-deploy-automatic.html]") [[传送门-in Github]](first-docker-deploy-automatic.md "[first-docker-deploy-automatic.md]")。如未按照上文或者上文的思想进行设置，肯定不会生效。
+下面的操作生效与否，取决于是否参照这篇文章的说明进行了设置，[[传送门]](first-docker-deploy-automatic.html "[first-docker-deploy-automatic.html]") [[传送门-in Github]](first-docker-deploy-automatic.md "[first-docker-deploy-automatic.md]")。如未按照上文或者上文的思想进行设置，肯定不会生效。    
 ![Deploy-docker-with-git](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git.png)    
 输入`git branch Release-general-1-1.0.0`创建一个Release分支。其中Release为发布分支的意思，general-1为系列的名字，我们在多个项目公用一个版本库，因而需要进行区分设置。1.0.0是发布的产品版本号。    
 ![Deploy-docker-with-git3](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git3.png)    
 输入`git checkout Release-general-1-1.0.0`切换到刚才创建的分支。    
-这时，系统给出了提示？好吧，正常情况是不该有提示的，然而我们正在写这篇MD文章，所以……这个问题可以愉快的忽略。继续执行。
+这时，系统给出了提示？好吧，正常情况是不该有提示的，然而我们正在写这篇MD文章，所以……这个问题可以愉快的忽略。继续执行。    
 ![Deploy-docker-with-git4](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git4.png)    
 输入`git commit`确认一下问题，的确是只有这两个md文件，那么果断忽略。执行最后一步操作。    
 ![Deploy-docker-with-git5](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git5.png)    
 输入`git push origin Release-general-1-1.0.0:Release-general-1-1.0.0`，但暂时先不执行。我们先打开Daocloud的控制台，看一下上次的执行情况，看看是否真的自动构建了。    
 ![Deploy-docker-with-git6](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git6.png)    
-按下回车之后，立即自动创建了一个镜像构建任务，并且“开始执行”。
+按下回车之后，立即自动创建了一个镜像构建任务，并且“开始执行”。    
 ![Deploy-docker-with-git7](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git7.png)    
 当镜像自动构建完成后，进入应用列表，找到基于这个镜像构建的应用。看见“事件”选项卡中，这个应用已经根据最新的镜像开始了自动发布。    
 那么我们还要做什么么？    
