@@ -34,6 +34,7 @@
 第二步，基于Master分支构建Release分支。    
 打开Git Shell（登陆配置、安装Git的过程不复述），进入master分支。如果当前不在master分支，执行`git checkout master`切换到master分支。    
 下面的操作生效与否，取决于是否参照这篇文章的说明进行了设置，[[传送门]](first-docker-deploy-automatic.html "[first-docker-deploy-automatic.html]") [[传送门-in Github]](first-docker-deploy-automatic.md "[first-docker-deploy-automatic.md]")。如未按照上文或者上文的思想进行设置，肯定不会生效。    
+本文忽略了设置tag的环节，如果需要自行查阅相关资料。    
 ![Deploy-docker-with-git](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git.png)    
 输入`git branch Release-general-1-1.0.0`创建一个Release分支。其中Release为发布分支的意思，general-1为系列的名字，我们在多个项目公用一个版本库，因而需要进行区分设置。1.0.0是发布的产品版本号。    
 ![Deploy-docker-with-git3](http://a.oss.yihuonet.com/storage/guide-book/Deploy-docker-with-git3.png)    
