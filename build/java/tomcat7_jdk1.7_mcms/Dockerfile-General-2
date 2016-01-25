@@ -4,15 +4,13 @@ MAINTAINER kai.zhu "kai.zhu@yihuonet.com"
 ENV REFRESHED_AT 2016-01-20 15:49
 
 #Version Define - !!!!!!!!!!!!!!!MUST REVISE HERE FIRST!!!!!!!!!!!!!!!!!!!!!
-ENV YIHUONET_MCMS_SERIES general-1
-ENV YIHUONET_MCMS_VER 1.1.0
+ENV YIHUONET_MCMS_SERIES general-2
+ENV YIHUONET_MCMS_VER 1.0.0
 ENV YIHUONET_MCMS_FILENAME mcms-$YIHUONET_MCMS_SERIES-v$YIHUONET_MCMS_VER.zip
 ########################################
 # History  
-# 2015-11-27 v0.0.1 First Version
-# 2015-12-23 v0.1.0 Push Online-test Version
-# 2016-01-04 v1.0.1 Land
-# 2016-01-25 v1.1.0 Final version update
+# 2015-01-20 v0.1.0 Fased by General-1 dockerfile
+# 2016-01-25 v1.0.0 Final version update
 ########################################
 ########################################
 #Official Code by docker-library, https://hub.docker.com/_/tomcat/
