@@ -9,7 +9,7 @@ ENV YIHUONET_MCMS_VER 1.0.1
 ENV YIHUONET_MCMS_FILENAME mcms-$YIHUONET_MCMS_SERIES-v$YIHUONET_MCMS_VER.zip
 ########################################
 # History  
-# 2015-01-20 v0.1.0 Fased by General-1 dockerfile
+# 2015-01-20 v0.1.0 Based by General-1 dockerfile
 # 2016-01-25 v1.0.0 Final version update
 ########################################
 ########################################
