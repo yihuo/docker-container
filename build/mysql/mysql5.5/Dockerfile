@@ -17,7 +17,7 @@ RUN { \
     } > /etc/mysql/conf.d/charset.cnf
 
 #Import scripts in here
-ADD script/ /docker-entrypoint-initdb.d/
+#ADD script/ /docker-entrypoint-initdb.d/
 
 #MySQL passwd and port
 ENV MYSQL_ROOT_PASSWORD my-secret-pw
