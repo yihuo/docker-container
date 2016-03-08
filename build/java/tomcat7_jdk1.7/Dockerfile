@@ -26,7 +26,7 @@ ENV DOWNLOAD_FILE http://us.oss.yihuonet.com/program-base/project/$YIHUONET_FILE
 
 #Deploy AND Delete origin root directory
 WORKDIR $CATALINA_HOME/webapps
-RUN apt-get install -y wget unzip \
+RUN apt-get update && apt-get install -y wget unzip \
     && rm -rf ROOT \
     && mkdir ROOT \
 	&& cd $CATALINA_HOME/$TOMCAT_ORIGIN_ROOT \

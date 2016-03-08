@@ -18,7 +18,7 @@ ENV YIHUONET_FILENAME $PROJECT_NAME-v$PROJECT_VER.zip
 ########################################
 ENV DOWNLOAD_FILE http://us.oss.yihuonet.com/program-base/project/$YIHUONET_FILENAME
 
-RUN apt-get install -y wget unzip \
+RUN apt-get update && apt-get install -y wget unzip \
     && rm -rf /var/www/html \
     && mkdir /var/www/html \
 	&& cd /var/www/html \
