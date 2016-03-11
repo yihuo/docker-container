@@ -1,0 +1,9 @@
+program:
+  image: daocloud.io/yihuo/nginx
+  restart: always
+  ports:
+  - "80"
+  environment:
+  - VIRTUAL_HOST=wx.yihuonet.com
+  volumes:
+  - /data/wx.yihuonet.com/www:/var/www/html
